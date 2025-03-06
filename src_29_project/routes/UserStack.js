@@ -10,13 +10,19 @@ const Stack = createNativeStackNavigator();
 export default class UserStack extends Component {
   render() {
     return (
-        // <Stack.Navigator >
+        <Stack.Navigator >
             <Stack.Screen name="User" component={UserScreen} 
                 options={{ 
-                    title: '用户'
-                }} 
+                  title: '用户',
+                  headerStyle: {
+                    backgroundColor: '#00b38a',
+                    elevation: 0, //删除安卓上的阴影
+                    shadowOpacity: 0 //删除iOS下的阴影
+                  },
+                  headerTintColor: '#fff'
+              }}
             />
-       // </Stack.Navigator>
+       </Stack.Navigator>
     )
   }
 }

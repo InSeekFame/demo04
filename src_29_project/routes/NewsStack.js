@@ -10,13 +10,19 @@ const Stack = createNativeStackNavigator();
 export default class NewsStack extends Component {
   render() {
     return (
-        // <Stack.Navigator > // tab.navigator包过不用再包
+        <Stack.Navigator >
             <Stack.Screen name="News" component={NewsScreen} 
                 options={{ 
-                    title: '新闻' 
-                }} 
+                  title: '新闻',
+                  headerStyle: {
+                    backgroundColor: '#00b38a',
+                    elevation: 0, //删除安卓上的阴影
+                    shadowOpacity: 0 //删除iOS下的阴影
+                  },
+                  headerTintColor: '#fff'
+              }}
             />
-        // </Stack.Navigator>
+        </Stack.Navigator>
     )
   }
 }

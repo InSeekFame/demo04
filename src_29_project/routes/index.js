@@ -1,4 +1,4 @@
-import {Text, StyleSheet, View, Button} from 'react-native';
+import {Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
 import React, {Component} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -24,26 +24,15 @@ export default class Index extends Component {
             }
             return <Icon name={iconName} size={size} color={color} />;
           },
+          headerShown: false // 隐藏tab的导航，不然会有两个重复的导航 
         })} 
         tabBarOptions={{
           activeTintColor: 'tomato', //当前项目激活后的颜色
           inactiveTintColor: 'gray', //未激活的颜色
         }}>
-        <Tab.Screen name="Home" component={HomeScreen} options={{
-          headerStyle: {
-            backgroundColor: 'tomato'
-          }
-        }} />
-        <Tab.Screen name="News" component={NewsScreen} options={{
-          headerStyle: {
-            backgroundColor: 'tomato'
-          }
-        }} />
-        <Tab.Screen name="User" component={UserScreen} options={{
-          headerStyle: {
-            backgroundColor: 'tomato'
-          }
-        }} />
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="News" component={NewsScreen} />
+        <Tab.Screen name="User" component={UserScreen} />
       </Tab.Navigator>
     );
   }

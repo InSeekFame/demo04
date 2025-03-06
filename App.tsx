@@ -9,11 +9,12 @@ import { Text, StyleSheet, View } from 'react-native'
 // import Index from './src_28_API'
 // import Index from './scr_23_icons'
 // import Index from './scr_23_TestTabs'
-// import Index from './src_29_project/routes'
 // import Index from './src_test_navigator'
 // import Index from './src_test_navigator/tab'
 // import Index from './src_24_drawer'
-import Index from './src_25_meterial_tap_tabs'
+// import Index from './src_25_meterial_tap_tabs'
+import Index from './src_29_project/routes'
+
 
 export default class App extends Component {
   render() {
