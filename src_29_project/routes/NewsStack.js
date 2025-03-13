@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NewsScreen from '../screens/News'
+import DetailScreen from '../screens/News/Detail';
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,15 @@ export default class NewsStack extends Component {
                   },
                   headerTintColor: '#fff'
               }}
+            />
+            <Stack.Screen name='NewsDetail' component={DetailScreen}
+                options={{
+                  title: '新闻列表', //自定义标题栏的标题
+                  // 自定义标题栏样式
+                  headerStyle: {
+                    backgroundColor: '#fff', // 自定义标题栏背景颜色
+                  },
+                }}
             />
         </Stack.Navigator>
     )
